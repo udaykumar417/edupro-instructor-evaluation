@@ -204,7 +204,7 @@ with tab1:
 
         styled = leaderboard.style\
             .map(color_tier, subset=["Tier"])\
-            .applymap(color_rating, subset=["Rating"])\
+            .map(color_rating, subset=["Rating"])\
             .format({"Rating": "{:.2f}", "Experience (yrs)": "{:.0f}"})
         st.dataframe(styled, use_container_width=True, height=500)
 
