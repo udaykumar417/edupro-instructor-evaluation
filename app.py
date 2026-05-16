@@ -203,7 +203,7 @@ with tab1:
             else: return "color: #e74c3c; font-weight: bold"
 
         styled = leaderboard.style\
-            .applymap(color_tier, subset=["Tier"])\
+            .map(color_tier, subset=["Tier"])\
             .applymap(color_rating, subset=["Rating"])\
             .format({"Rating": "{:.2f}", "Experience (yrs)": "{:.0f}"})
         st.dataframe(styled, use_container_width=True, height=500)
