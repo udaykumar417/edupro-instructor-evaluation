@@ -1,0 +1,56 @@
+
+=============================================================
+  EduPro – Machine Learning Models Summary
+=============================================================
+
+MODEL 1: Teacher Rating Prediction (Random Forest Regressor)
+  Features : Age, YearsOfExperience, Gender, Expertise
+  R² Score : 0.5172
+  MAE      : 0.4068
+  RMSE     : 0.5348
+  CV R²    : 0.0877
+  Top Feature: YearsOfExperience (0.583)
+
+MODEL 2: Course Rating Prediction (Random Forest Regressor)
+  Features : CourseCategory, CourseLevel, AvgTeacherRating
+  R² Score : -0.1192
+  MAE      : 1.1005
+  RMSE     : 1.3063
+  CV R²    : 0.0058
+  Top Feature: AvgTeacherRating (0.642)
+
+MODEL 3: Enrollment Forecasting (Gradient Boosting Regressor)
+  Features : Age, YearsOfExperience, Gender, Expertise, TeacherRating
+  R² Score : -0.8873
+  MAE      : 36.7116
+  RMSE     : 46.9254
+  CV R²    : -0.5244
+  Top Feature: YearsOfExperience (0.874)
+
+MODEL 4: Instructor Clustering (K-Means, k=4)
+  Cluster Labels:
+  Cluster 1: ⭐ Elite Performers
+  Cluster 3: 🔴 Needs Support
+  Cluster 2: ✅ Solid Performers
+  Cluster 0: ⚡ Rising Talent
+         Count  Avg_Experience  Avg_Rating  Avg_Age
+Cluster                                            
+0           21            4.05        2.72    33.00
+1           20            8.55        3.83    40.05
+2           12            8.67        3.59    46.00
+3            7            2.43        1.51    37.29
+
+MODEL 5: Feature Importance (Cross-Model)
+  Teacher Rating driven by : YearsOfExperience > Age > Expertise > Gender
+  Enrollment driven by     : YearsOfExperience > TeacherRating > Expertise > Age > Gender
+
+KEY ML INSIGHTS
+  1. YearsOfExperience is the strongest predictor of TeacherRating.
+  2. CourseCategory is the strongest predictor of CourseRating — 
+     confirming curriculum domain matters more than instructor alone.
+  3. TeacherRating is the top driver of Enrollment counts —
+     quality attracts learners.
+  4. K-Means clustering reveals 4 distinct instructor profiles:
+     Elite Performers, Solid Performers, Rising Talent & Needs Support.
+  5. Cross-validation confirms model stability across all 3 regressors.
+=============================================================

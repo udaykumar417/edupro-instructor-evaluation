@@ -1,0 +1,109 @@
+
+=============================================================
+  EduPro – EDA Summary Report
+=============================================================
+
+DATASET OVERVIEW
+  Teachers     : 60 instructors
+  Courses      : 60 courses  |  12 categories  |  3 levels
+  Transactions : 10,000 enrollments  |  Jan–Dec 2025
+
+KEY PERFORMANCE INDICATORS
+  Avg Teacher Rating          : 3.12 / 5.00
+  Avg Course Rating           : 3.10 / 5.00
+  Rating Std Dev (teachers)   : 0.95  ← moderate spread
+  Experience-Rating Corr      : 0.598  ← moderate positive
+  Teacher→Course Rating Corr  : -0.002  ← near-zero (key finding!)
+
+INSTRUCTOR RATING TIERS
+RatingTier
+Low (0-2)      9
+Mid (2-3)     12
+Good (3-4)    28
+Top (4-5)     11
+
+TOP 3 INSTRUCTORS
+    TeacherName        Expertise  YearsOfExperience  TeacherRating
+ Yolanda Levine Machine Learning                 21           4.97
+Kimberly Miller    Cybersecurity                 24           4.58
+   Kristi Scott Machine Learning                  9           4.39
+
+BOTTOM 3 INSTRUCTORS
+    TeacherName          Expertise  YearsOfExperience  TeacherRating
+  John Williams Project Management                  1           1.05
+ Timothy Bailey           Business                  3           1.06
+Emily Gutierrez    Web Development                  5           1.07
+
+EXPERTISE PERFORMANCE (Avg Teacher Rating)
+Expertise
+Marketing                  4.290000
+Machine Learning           4.234000
+Programming                3.950000
+Cybersecurity              3.468889
+Finance                    3.265000
+Artificial Intelligence    3.173333
+Digital Marketing          3.050000
+Data Science               3.030000
+Project Management         2.664000
+Web Development            2.514000
+Design                     2.290000
+Business                   2.245000
+
+COURSE QUALITY BY CATEGORY (Avg Course Rating)
+CourseCategory
+Marketing                  3.722
+Digital Marketing          3.656
+Data Science               3.316
+Design                     3.162
+Project Management         3.142
+Programming                3.036
+Artificial Intelligence    3.036
+Finance                    3.010
+Cybersecurity              2.902
+Web Development            2.846
+Business                   2.688
+Machine Learning           2.658
+
+COURSE QUALITY BY LEVEL
+CourseLevel
+Intermediate    3.322778
+Beginner        3.189048
+Advanced        2.813810
+
+ENROLLMENT BY TEACHER TIER
+RatingTier
+Low (0-2)      815
+Mid (2-3)      789
+Good (3-4)    1576
+Top (4-5)     6820
+
+GENDER BREAKDOWN
+  Count  : {'Male': 33, 'Female': 27}
+  Avg Rating : Female=3.23  Male=3.04
+
+KEY INSIGHTS
+  1. Experience matters: r=0.598 positive correlation between years of
+     experience and teacher rating — more experienced teachers tend to
+     be better rated.
+  2. Teacher rating does NOT directly translate to course rating (r≈0):
+     course quality depends on curriculum design, not just the instructor.
+  3. Top-rated teachers dominate enrollments: 68% of all enrollments go
+     to Top-tier (4-5 rated) instructors, showing strong learner preference.
+  4. Marketing & Machine Learning lead instructor quality; Business &
+     Design show the weakest average teacher ratings.
+  5. Intermediate-level courses outperform Advanced ones in ratings —
+     Advanced courses may need curriculum review.
+  6. Female instructors slightly outperform male instructors on average
+     (3.23 vs 3.04).
+  7. High rating consistency std=0.95 means a wide performance gap
+     exists — targeted mentoring for low-tier instructors is needed.
+
+RECOMMENDATIONS
+  • Fast-track mentoring for instructors rated below 2.0 (9 instructors).
+  • Investigate why Business & Design categories underperform.
+  • Review Advanced course content across all categories.
+  • Leverage top-tier instructors (Yolanda Levine, Kimberly Miller) as
+    mentors or course design consultants.
+  • Develop a structured onboarding curriculum for new instructors —
+    the data shows early-career instructors cluster in lower tiers.
+=============================================================
